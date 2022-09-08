@@ -1,85 +1,29 @@
-//alert("Hello");
+var randomNumber1 = Math.floor((Math.random() * 6)) + 1;
 
-//Loop through all the 'pad class' and query the values.
-for (var pds = 0; pds < document.querySelectorAll(".pad").length; pds++){
+var randomDiceImage = "dice" + randomNumber1 + ".png";
 
-document.querySelectorAll("button")[pds].addEventListener("click", function(){
-var buttonInnerHTML  = this.innerHTML;
+var randomImageSource = "images/" + randomDiceImage;
 
-	makeSound(buttonInnerHTML)
-	buttonAnimation(buttonInnerHTML)
+var image1 = document.querySelectorAll("img")[0];
 
-});
+image1.setAttribute("src", randomImageSource);
 
+//
+
+var randomNumber2 = Math.floor(Math.random() * 6) + 1;
+
+var randomImageSource2 = "images/dice" + randomNumber2 + ".png";
+
+document.querySelectorAll("img")[1].setAttribute("src", randomImageSource2);
+
+//
+
+if (randomNumber1 > randomNumber2){
+	document.querySelector("h1").innerHTML = "Player 1 Wins👏";
 }
-
-
-document.addEventListener("keydown", function(event){
-
-	makeSound(event.key);
-	buttonAnimation(event.key);
-});
-
-
-//Create a function that will hold / serve as the swith for the sound.
-
-function makeSound(key){
-
-	switch (key){
-		case "w":
-			var tom1 = new Audio('sounds/tom-1.mp3');
-			tom1.play();
-		break;
-
-		case "a":
-			var tom2 = new Audio('sounds/tom-2.mp3');
-			tom2.play();
-		break;
-
-		case "s":
-			var tom3 = new Audio('sounds/tom-3.mp3');
-			tom3.play();
-		break;
-
-		case "d":
-			var tom4 = new Audio('sounds/tom-4.mp3');
-			tom4.play();
-		break;
-
-		case "j":
-			var snare = new Audio('sounds/snare.mp3');
-			snare.play();
-		break;
-
-		case "k":
-			var crash = new Audio('sounds/crash.mp3');
-			crash.play();
-		break;
-
-		case "l":
-			var kick = new Audio('sounds/kick-bass.mp3');
-			kick.play();
-		break;
-
-		case "n":
-			var kick = new Audio('sounds/kick-bass.mp3');
-			kick.play();
-		break;
-
-		case "i":
-			var kick = new Audio('sounds/kick-bass.mp3');
-			kick.play();
-		break; 
-
-		default: console.log(buttonInnerHTML);
-	}
-
+else if (randomNumber2 > randomNumber1){
+	document.querySelector("h1").innerHTML = "Player 2 Wins👏";
 }
-
-function buttonAnimation(currentKey) {
-	var activeButton = document.querySelector("." + currentKey)
-	activeButton.classList.add("pressed");
-	setTimeout(function(){
-		activeButton.classList.remove("pressed");
-	}, 100);
+else {
+	document.querySelector("h1").innerHTML = "DRAW 🤭";
 }
