@@ -1,22 +1,82 @@
-.container {
-	text-align: center;
-}
-
 body{
-	background-color: #3FA796;
+	text-align: center;
+	font-family: 'Anton', sans-serif;
+	font-weight: bolder;
+	line-height: 1,5;
+	font-size: 3rem;
+	text-shadow: 3px 0 #ECB390;
+	background-color: #FFDBA4;
+
 }
 
-h1 {
-	font-family: 'Mouse Memoirs', sans-serif;
-	font-size: 8rem;
-	font-weight: bold;
-	text-align: center;
+h1, h3{
+	margin: 20px;
 }
 
-p {
-	font-family: 'Mouse Memoirs', sans-serif;
-	font-weight: bold;
+.set {
+  margin: auto auto;
 }
-#footer {
-	text-align: center;
+
+.pressed {
+  box-shadow: 0 3px 4px 0 #DBEDF3;
+  opacity: 0.5;
+}
+
+.w{
+	background-color: #EBA21A;
+}
+
+.a{
+	background-color: #F5351B;
+}
+
+.s{
+	background-color: #5823DE;
+}
+
+.d{
+	background-color: #1BF5CF;
+}
+
+.j{
+	background-color: #CFEB00;
+}
+
+.k{
+	background-color: #59ED24;
+}
+
+.l{
+	background-color: #AD02E0;
+}
+
+.n{
+	background-color: #26A9ED;
+}
+
+.i{
+	background-color: #0CEDB5;
+}
+
+.pad {
+  
+  outline: none;
+  border: 10px solid #404B69;
+  font-size: 5rem;
+  font-family: 'Arvo', cursive;
+  line-height: 2;
+  font-weight: 900;
+  color: #DA0463;
+  text-shadow: 3px 0 #DBEDF3;
+  border-radius: 15px;
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  margin: 10px;
+}
+
+#footer{
+
+	margin-top: 110px;
 }
